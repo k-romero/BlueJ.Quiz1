@@ -26,11 +26,10 @@ public class LoopFun
        */
       public String acronym(String phrase) {
           String result = "";
-          String[] parts = phrase.split(" ");
-          
-    
-          
-          return result;
+          for(String s : phrase.split(" ")) {
+                result += s.charAt(0);    
+          }
+          return result.toUpperCase();
       }
 
       /**
