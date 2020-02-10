@@ -45,6 +45,22 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          String result = "";
+          int shift = 3;
+          for (int i = 0; i < word.length(); i++){
+            if (Character.isUpperCase(word.charAt(i))) 
+            { 
+                char ch = (char)(((int)word.charAt(i) + shift - 65) % 26 + 65); 
+                result += ch; 
+            } 
+            else
+            { 
+                char ch = (char)(((int)word.charAt(i) + shift - 97) % 26 + 97); 
+                result += ch; 
+            }
+          }
+          
+          
+          return result;
       }
 }
